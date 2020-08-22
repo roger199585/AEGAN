@@ -1,5 +1,5 @@
 MVTec/**
 **/checkpoints
 **/checkpoint
-**/save_weight
-
+.ipynb_checkpoint
+**/**/.ipynb_checkpointss
