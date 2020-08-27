@@ -1,5 +1,6 @@
-MVTec/**
 **/checkpoints
 **/checkpoint
 .ipynb_checkpoint
 **/**/.ipynb_checkpointss
+MVTec/
+
