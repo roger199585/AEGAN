@@ -7,7 +7,7 @@ class Simulator(nn.Module):
         super(Simulator, self).__init__()
         self.input_dim = input_dim
         self.cnum = cnum
-
+        
         self.block1 = nn.Sequential(
             # conv1
             nn.Conv2d(self.input_dim + 1, self.cnum, kernel_size=5, stride=1, padding=2),

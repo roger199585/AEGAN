@@ -90,12 +90,9 @@ class PNetLin(nn.Module):
             else:
                 res = [spatial_average(diffs[kk].sum(dim=1,keepdim=True), keepdim=True) for kk in range(self.L)]
 
-        _weight = 1
-        val = res[0] * _weight
-        _weight -= 0.1
+        val = res[0]
         for l in range(1, self.L):
-            val += res[l] * _weight
-            _weight -= 0.1
+            val *= res[l]
 
         if(retPerLayer):
             return (val, res)
