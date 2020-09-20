@@ -6,10 +6,10 @@ from utils.tools import get_config, default_loader, is_image_file, normalize
 
 class MVTecDataset(Dataset):
     def __init__(self, TYPE='bottle', isTrain='train'):
-        self.gt_path = '/workspace/MVTec/'+TYPE+'/ground_truth_resize/all'
-        self.train_path = '/workspace/MVTec/'+TYPE+'/train_resize/train'
-        self.val_path = '/workspace/MVTec/'+TYPE+'/train_resize/validation'
-        self.test_path = '/workspace/MVTec/'+TYPE+'/test_resize/all'
+        self.gt_path = '/root/AFS/Corn/AEGAN/MVTec/'+TYPE+'/ground_truth_resize/all'
+        self.train_path = '/root/AFS/Corn/AEGAN/MVTec/'+TYPE+'/train_resize/train'
+        self.val_path = '/root/AFS/Corn/AEGAN/MVTec/'+TYPE+'/train_resize/validation'
+        self.test_path = '/root/AFS/Corn/AEGAN/MVTec/'+TYPE+'/test_resize/all'
         
         self.data_path = self.train_path if isTrain=='train' else self.val_path if isTrain=='val' else self.test_path
         self.samples = [x for x in os.listdir(self.data_path) if is_image_file(x)]
